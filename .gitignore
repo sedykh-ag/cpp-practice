@@ -29,4 +29,11 @@
 # Executables
 *.exe
 *.out
-*.app
+
+# VSCode
+.vscode
+
+# Build
+build
+wbuild
+lbuild
