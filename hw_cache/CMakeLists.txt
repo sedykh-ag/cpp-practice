@@ -18,6 +18,9 @@ add_custom_target(
   DEPENDS ${CMAKE_SOURCE_DIR}/compare_results.txt
 )
 
+# For some reason, ctest does not see tests in subdirectories.
+# This is why I had to duplicate these tests here.
+
 set(IDEAL_TESTS ${CMAKE_SOURCE_DIR}/ideal/tests)
 set(LFU_TESTS ${CMAKE_SOURCE_DIR}/lfu/tests)
 
