@@ -25,7 +25,6 @@ int main()
     assert(std::cin.good());
     if (cache.lookup_update(key, slow_get_page_int)) // if cache hit
       hits += 1;
-    // cache.print();
   }
   std::cout << hits << std::endl;
 }
