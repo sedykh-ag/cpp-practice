@@ -11,11 +11,11 @@
 template <typename ValueT, typename KeyT = int>
 class LFUCache
 {
-private:
   using CounterT = unsigned;
   using ListItem = std::tuple<KeyT, ValueT, CounterT>;
   using ListIt = typename std::list<ListItem>::iterator;
 
+private:
   size_t capacity_;
 
   std::list<ListItem> list_;
@@ -58,7 +58,6 @@ public:
     // hit
     auto &tuple = *(map_it->second);
     std::get</* CounterT */2>(tuple) += 1;
-    std::get</* ValueT */ 1>(tuple) = slow_get_page(key);
     return true;
   }
 

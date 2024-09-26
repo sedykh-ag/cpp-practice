@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cassert>
 
-#include <lfu.h>
+#include <lfu_advanced.h>
 
 
 int slow_get_page_int(int key) { return key; }
