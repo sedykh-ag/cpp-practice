@@ -1,37 +1,16 @@
 # Caches homework
 Contains LFU cache and ideal cache implementation and their comparison.
 
-## LFU Cache
-**Build**
+## Building
+To build both projects, do
+
 ```sh
-cd lfu
 cmake -S . -B build
 cmake --build build
 ```
-**Run tests**
-```sh
-cd build
-ctest -C Debug
-```
 
-## Ideal Cache
-**Build**
-```sh
-cd ideal
-cmake -S . -B build
-cmake --build build
-```
-**Run tests**
-```sh
-cd build
-ctest -C Debug
-```
-
-## Comparison
-To compare LFU cache with ideal caching, run
-```sh
-python compare.py
-```
+After building, `compare.py` script will automatically be launched, which compares LFU caching with ideal caching.
+The results will be in the `compare_results.txt` file.
 
 ## Conclusions
 
